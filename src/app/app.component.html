@@ -1,0 +1,19 @@
+<iui-treeview [items]="data" (afterSelect)="onAfterSelect($event)" (itemAdded)="onItemAdded($event)" (itemRemoving)="onItemRemoving($event)" (itemRemoved)="onItemRemoved($event)" (clear)="onClear()" [controlStyle]="ctrlStyle" #treeview>
+    <ng-template let-item>
+        <span>{{item.text}}</span>
+    </ng-template>
+</iui-treeview>
+<div class="control-panel trw-add-rmv-control-panel" align="center" style="width:150px">
+    <button (click)="addRoot()">Add Root</button><br />
+    <button (click)="addChild()" [disabled]="disableButtons">Add Child</button><br />
+    <button (click)="insertAfter()" [disabled]="disableButtons">Insert After</button><br />
+    <button (click)="insertBefore()" [disabled]="disableButtons">Insert Before</button><br />
+    <div class="inline-block">
+        <button class="inline-button" (click)="insertAt()">Insert At</button><input [(ngModel)]="insertPos" type="number" min="0" max="100" style="width:35px" />
+    </div>
+    <button (click)="remove()" [disabled]="disableButtons">Remove</button><br />
+    <div class="inline-block">
+        <button class="inline-button" (click)="removeAt()">Remove At</button><input [(ngModel)]="removePos" type="number" min="0" max="100" style="width:35px" /><br />
+    </div>
+    <button (click)="clear()" [disabled]="disableButtons">Clear</button>
+</div>

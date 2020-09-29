@@ -1,0 +1,27 @@
+.trw-add-rmv-normal
+{
+    float: left;
+    width: 350px;
+    height: 330px;
+}
+.control-panel
+{
+    float: left;
+    margin-left: 20px;
+    width: 200px;
+}
+.trw-add-rmv-control-panel button
+{
+    margin: 5px 0;
+    width: 125px;
+}
+.trw-add-rmv-control-panel .inline-block
+{
+    display: inline-block;
+    margin: 3px 0;
+}
+.trw-add-rmv-control-panel .inline-button
+{
+    width: 85px;
+    margin-right: 3px
+}
